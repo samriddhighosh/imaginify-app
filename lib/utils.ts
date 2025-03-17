@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable prefer-const */
 /* eslint-disable no-prototype-builtins */
 import qs from "qs"
@@ -90,6 +91,7 @@ export const debounce = (func: (...args: any[]) => void, delay: number) => {
   let timeoutId: NodeJS.Timeout | null;
   return (...args: any[]) => {
     if (timeoutId) clearTimeout(timeoutId);
+    // eslint-disable-next-line prefer-spread
     timeoutId = setTimeout(() => func.apply(null, args), delay);
   };
 };

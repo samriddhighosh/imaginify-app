@@ -3,11 +3,7 @@ import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+  
 } from '@clerk/nextjs'
 
 const IBMSans = IBM_Plex_Sans({
