@@ -112,12 +112,12 @@ declare type CreateUserParams = {
     keysToRemove: string[];
   };
   
-declare type RouteProps = {
-    params: { id: string; type: TransformationTypeKey };
-    searchParams: { [key: string]: string | string[] | undefined };
-  };
+declare type SearchParamProps = {
+  params: { id: string; type: TransformationTypeKey };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
   
-  declare type TransformationFormProps = {
+declare type TransformationFormProps = {
     action: "Add" | "Update";
     userId: string;
     type: TransformationTypeKey;
