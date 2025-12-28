@@ -6,9 +6,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const Home = async ({ searchParams }:SearchParamProps) => {
+const Home = async ({ searchParams }: SearchParamProps) => {
 
-  const searchParam = await searchParams
+  const searchParam = searchParams
   
   const page = Number(searchParam?.page) || 1;
   const searchQuery = (searchParam?.query as string) || '';

@@ -7,9 +7,9 @@ import { getUserById } from '@/lib/actions/user.actions'
 import { redirect } from 'next/navigation'
 import { getSupportedBrowsers } from 'next/dist/build/utils'
 
-const AddTranformationTypePage = async({params}: SearchParamProps) => {
+const AddTranformationTypePage = async ({ params }: SearchParamProps) => {
 
-  const { type } = await params;
+  const type = params?.type as TransformationTypeKey;
 
   const {userId} = await auth()
   
